@@ -8,6 +8,7 @@ const routes = [
   {
     path: '/',
     component: Home,
+    name: 'home'
   },
 ]
 
@@ -16,7 +17,7 @@ const App = () => (
       <Switch>
         {routes.map((route, index) => (
           <Route
-            key={`${route.component}-${index}`}
+            key={`${route.name}-${index}`}
             exact
             path={route.path}
             component={route.component}
